@@ -29,7 +29,7 @@ const SYSTEM_PROMPT = `Ты — венчурный инвестор с опыт�
 По 3 пункта в каждом массиве. Никакого текста до или после JSON.`;
 
 app.get('/', (_req, res) => {
-  res.redirect('/demo');
+  res.sendFile(new URL('./local-demo.html', import.meta.url).pathname);
 });
 
 app.get('/demo', (_req, res) => {
